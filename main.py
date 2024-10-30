@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn import svm, tree, linear_model
 
-# График для нечисловых данных - График дефектов
+
 df = pd.read_excel("ssda.xlsx", sheet_name='Лист1', header=0)
 vegetables = ['Не опр.', 'Медленная скор.', 'Хор.']
 counts1 = 0
@@ -25,7 +25,7 @@ plt.ylabel('Количество')
 plt.show()
 
 
-# Диаграмма круговая - разделение дисков по Размеру ГБ
+
 df = pd.read_excel("ssda.xlsx", sheet_name='Лист1', header=0)
 countsgb1 = countsgb2 = countsgb3 = countsgb4 = countsgb5 = countsgb6 = 0
 for i in df.Размер:
@@ -48,7 +48,7 @@ plt.show()
 
 
 
-# Точечная диаграмма - Значение цены в зависимости от параметра размер
+
 df = pd.read_excel("ssda.xlsx", sheet_name='Лист1', header=0)
 plt.scatter(df.Размер, df.Цена, color='red', marker='+')
 plt.xlabel('Размер, гб')
@@ -73,7 +73,7 @@ p = (reg.predict(pred))
 
 
 pred['price'] = p
-# среднее значение цены в зависимости от параметра размер
+
 print(pred)
 
 
